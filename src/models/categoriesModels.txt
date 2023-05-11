@@ -1,0 +1,30 @@
+// 17. importamos db desde utils.
+const db = require ('../utils/database')
+
+//18. traer DataTypes, con las mayusculas, para definir los atributos de las bases de datos.
+const {DataTypes}= require ('sequelize');
+
+//19. definir un modelo, nombre de la tabla. acepta 2 argumentos. nombre de la tabla y las propiedades de la tabla.
+
+//los DataTypes siempre van en mayuscula, x ejemplo DataTypes.INTEGER.
+const  Categories = db.define('categories', {
+    id: {
+        type: DataTypes.INTEGER, 
+        primaryKey: true,
+        autoIncrement: true, 
+        allowNull: false,
+    },
+    name: {
+        type: DataTypes.STRING(30),
+        allowNull: false, 
+
+    },
+
+},
+{
+    timestamps: false,
+})
+
+//20.Exportar tabla
+
+module.exports= Categories
