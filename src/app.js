@@ -9,7 +9,7 @@ const Users=require('./models/usersModels');
 
 
 //Seleccion de puerto automatico, si no hay valor en PORT usa el 8000, se importa el env y se configura  con el require  y abajo en listen se cambia el 8000 x el port linea 139 
-require('dotenv')GIT .config()
+require('dotenv').config()
 const PORT = process.env.PORT || 8000;
 
 
