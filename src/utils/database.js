@@ -1,7 +1,7 @@
 //vamos a gestionar la conexion con una base de datos
 //10. importar sequelize
 
-const {sequalize, Sequelize}= require ('sequelize')
+const {Sequelize}= require ('sequelize');
 
 //VARIABLES DE ENTORNO. 
 //donde se vayan a usar las variables de entorno se importa el donenv
