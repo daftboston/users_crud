@@ -10,7 +10,7 @@ const db = require('./utils/database');
 const Users=require('./models/usersModels');
 const cors = require("cors");
 
-app.use(cors());
+
 
 
 
@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 //IMPORTANTE para poder extraer formato jason y comvertirlo en un objeto que podamos manipular despues del express y antes de las peticiones  
-
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res)=>{
