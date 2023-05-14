@@ -1,11 +1,14 @@
 //1.  npm init -y.  
-//2. npm install express
+//2. npm install express  nodemon -D  npm i pg pg-hstore     actualizar los scripts
 //3. crear archivo app.js
 //4. importar express 
+// crear carpeta src y meter el archivo app.js 
+
 
 const express = require ('express');
 const db = require('./utils/database');
 const Users=require('./models/usersModels');
+const cors = require('cors')
 
 
 //Seleccion de puerto automatico, si no hay valor en PORT usa el 8000, se importa el env y se configura  con el require  y abajo en listen se cambia el 8000 x el port linea 139 
@@ -13,11 +16,20 @@ require('dotenv').config()
 const PORT = process.env.PORT || 8000;
 
 
+//25b habilitar cors antes que el const app= express
+
+app.use(cors())
+
+
+
+
 
 
 
 
 //5. crear una instacioa de express llamada app
+
+
 
 const app = express();
 //IMPORTANTE para poder extraer formato jason y comvertirlo en un objeto que podamos manipular despues del express y antes de las peticiones  
@@ -201,3 +213,7 @@ db.sync()
 //donde se vayan a usar las variables de entorno se importa el donenv, en este caso en el database
 
 console.log(process.env);
+
+
+//26 instalar cors.  cors es  un paquete de node.js que nos provee un middelware de conexion express nom i cors
+// luego importarlo const cors = require('cors')
