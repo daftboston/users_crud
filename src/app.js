@@ -8,9 +8,9 @@
 const express = require ('express');
 const db = require('./utils/database');
 const Users=require('./models/usersModels');
-const cors = require('cors')
+const cors = require('cors');
 
-
+app.use(cors());
 
 
 
