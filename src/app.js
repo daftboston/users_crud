@@ -11,6 +11,9 @@ const Users=require('./models/usersModels');
 const cors = require('cors')
 
 
+
+
+
 //Seleccion de puerto automatico, si no hay valor en PORT usa el 8000, se importa el env y se configura  con el require  y abajo en listen se cambia el 8000 x el port linea 139 
 require('dotenv').config()
 const PORT = process.env.PORT || 8000;
@@ -18,7 +21,6 @@ const PORT = process.env.PORT || 8000;
 
 //25b habilitar cors antes que el const app= express
 
-app.use(cors());
 
 
 
