@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8000;
 
 //25b habilitar cors antes que el const app= express
 
-app.use(cors())
+app.use(cors());
 
 
 
